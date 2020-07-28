@@ -1,0 +1,22 @@
+<h3 mat-dialog-title>Tambahkan Skincare </h3>
+<div mat-dialog-content>
+  <mat-form-field style="width: 100%;">
+    <mat-label>Nama Skincare</mat-label>
+    <input matInput [(ngModel)]="data.namaskincare">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Harga</mat-label>
+    <input matInput [(ngModel)]="data.harga">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Expired</mat-label>
+    <input matInput [(ngModel)]="data.expired">
+  </mat-form-field>
+</div>
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close>Batal</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan(data)">Simpan</button>
+</mat-dialog-actions>
